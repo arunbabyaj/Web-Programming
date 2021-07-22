@@ -1,0 +1,83 @@
+<html>
+<title>validation</title>
+ <meta charset="utf-8">
+<head>
+<script>
+function passValidate()
+{ var checkpas1=document.getElementById('id7').value;
+var checkpas2=document.getElementById('id8').value;
+  if(checkpas1=='')
+   {
+      alert(" password can not be blank ");
+      document.getElementById("id7").focus();
+      return false;
+   }
+  else if (checkpas2=='') {
+    alert(" confirm password can not be blank ");
+    document.getElementById("id8").focus();
+    return false;
+
+  }
+  else if (checkpas1!=checkpas2) {
+    alert(" password doesnt match ");
+    document.getElementById("id7").focus();
+    return false;
+
+  }
+  else {
+    return true;
+  }
+}
+
+</script>
+</head>
+<body>
+<form class="form" name="frm1" method="post">
+ <table border="0" align="center" width="750" height="600">
+  <tr>
+   <td>NAME:</td>
+   <td><input type="text" name="nam" id="id1"></td>
+  </tr>
+<tr>
+  <td>AGE:</td>
+ <td><select id="id2" name="age"><option value="" selected disabled hidden>[Select Age]</option><option value="18">18</option>
+<option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+ <option value="24">24</option><option value="25">25</option></select></td>
+</tr>
+<tr>
+ <td>GENDER:</td>
+ <td><input type="radio" name="id3" value="male" >Male<input type="radio"  name="id3" value="female" >Female</td>
+</tr>
+ <tr>
+ <td>PHONE NUMBER:</td>
+ <td><input type="number" id="id4" name="phone" ></td>
+</tr>
+<tr>
+ <td>EMAIL:</td>
+ <td><input type="text" id="id5" name="email" placeholder="mandatory"></td>
+</tr>
+<tr>
+ <td>ADDRESS:</td>
+ <td><textarea id="id6" rows="7" cols="25" ></textarea></td>
+</tr>
+<tr>
+ <td>PASSWORD:</td>
+ <td><input type="password" id="id7" name="passwd" placeholder="mandatory"></td>
+</tr>
+<tr>
+ <td>CONFIRM-PASSWORD:</td>
+ <td><input type="password" id="id8" name="cpasswd" placeholder="mandatory"></td>
+</tr>
+<tr>
+ <td colspan="2"><input type="checkbox" >I HEREBY DECLARE THAT ALL THE INFORMATION FURNISHED ABOVE IS ACCURATE UPTO THE EXTENT OF MY KNOWLEDGE.</td>
+</tr>
+<tr>
+ <td align="center" colspan="2"><input type="submit" value="SUBMIT" onclick="passValidate()"></td>
+</tr>
+<tr>
+    <td align="center" colspan="2"><input type="reset" value="RESET"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

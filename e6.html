@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function factorial(){
+var i, no, fact;
+fact=1;
+no=document.getElementById("id").value;
+for(i=1; i<=no; i++)  
+{
+fact= fact*i;
+}  
+document.getElementById("f1").innerHTML= "Factorial="+fact;
+}
+</script>
+</head>
+<body bgcolor="yellow">
+<marquee style="color:green;"><h1>WELCOME TO THE WORLD OF JAVASCRIPT</h1></marquee>
+<center><p><b><h1><u>MY FIRST JAVASCRIPT PROGRAM</u></h1></b></p>
+Enter Num: <input type="text" id="id">
+<input type="button" value="FIND FACTORIAL" onclick="factorial()">
+<p id="f1"></p>
+</center>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<script>
+			function Palindrome()
+			{
+				var rem, temp, final = 0;
+				var number = parseInt(prompt("enter a no:"));
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					window.alert("The number is Palindrome"+number);
+                                         document.getElementById("id1").innerHTML= "the number is palindrome";
+				}
+				else
+				{
+					window.alert("The  number  is not palindrome"+number);
+                                       document.getElementById("id1").innerHTML= "the numbernot palindrome";
+				}
+			}
+                         function palin(string)
+                          {
+
+   
+                              var len = string.length;
+                                 for (var i = 0; i < len / 2; i++)
+                                   {
+                                 if (string[i] !== string[len - 1 - i])
+                                  {
+                                return "The Given String "+"'"+string+"'"+" is not a palindrome";
+                                  }
+                                }
+                              return "The Given String "+"'"+string+"'"+"is a palindrome";
+                              }
+ 
+                      function st()
+                         {
+
+                           var string = prompt('Enter a string: ');
+                           var value = palin(string);
+                           alert(value);
+                          document.getElementById("id1").innerHTML=value;
+  
+                            }
+
+                </script>
+         </head>
+                <body>
+	
+		<br>
+                <table border="1">
+                <tr>
+                <td>
+		<center><button onClick="Palindrome()">CHECK NUMBER</button></td>
+                <td>
+		<center><button onClick="st()">CHECK STRING</button></td>
+                 </tr>
+                <p style="color:red;" id="id1"></p>
+         
+	
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> CET,TVM</title>
+    <style>
+     body{
+  background-color: blue;
+  margin:auto;
+}
+
+img.changing{
+   width: 100%;
+   height: 300px;
+}
+
+div.title1
+{   background-color:blue ;
+    widht:100%;
+    height:40px;
+}
+h1.HEAD
+{
+  color:red;
+  text-align: center;
+}
+
+div.class3
+{   background-color: red;
+    widht:100%;
+    height:40px;
+}
+
+div.class1 {
+  float: left;
+  width: 30%;
+  background-color: red;
+  height: auto;
+  height: 300px;
+
+}
+div.class2 {
+  background-color: red;
+  float: right;
+  width: 70%;
+  height: 300px;
+}
+
+ul{
+  list-style-type:none;
+}
+li
+{
+  padding: 15px 15px 0px 15px;
+  font-size: 20px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.frame1
+{
+   height:100%;
+    width:100%;
+    border: none;
+    overflow: hidden;
+}
+
+    </style>
+    <script>
+    
+
+
+
+    var images = [
+      "1.jpeg",
+      "2.jpeg",
+      "3.jpeg",
+    ];
+
+
+    var x = 0;
+
+
+function change() {
+    document.getElementById("im1").src=images[x];
+    x++;
+    if(x>2)
+    {
+      x=0;
+    }
+    setTimeout("change()", 2000);
+}
+
+   </script>
+  </head>
+
+  <body onload="change()" >
+    <div class="title1">
+       <h1 class="HEAD"> COLLEGE OF ENGINEERING TRIVANDRUM </h1>
+
+    </div>
+    <br>
+  <img id="im1" class="changing" src="bg.jpg">
+  <div class="class3">
+      <h2>LATEST NEWS </h2>
+  </div>
+
+     <div class="class1">
+       <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+       <ul>
+           <li><a href="series.html" target="frame">
+               SERIES EXAMS</a>
+           </li>
+           <li>
+               <a href="acht.html" target="frame">
+               PROUD ACHIEVEMENTS</a>
+           </li>
+           <li><a href="news.html" target="frame">
+              NEWS
+           </a>
+           </li>
+           <li><a href="https://www.cet.ac.in/the-college" target="frame">
+               ABOUT COLLEGE</a>
+           </li>
+       </ul>
+   </marquee>
+
+  </div>
+  <div class="class2">
+    <iframe name="frame" class="frame1">
+  </div>
+
+
+
+  </body>
+</html>

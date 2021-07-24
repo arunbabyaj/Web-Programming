@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET-TVM</title>
+        <link rel="stylesheet" href="12style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="display()">
+    <div class="container">
+        
+        <div class="image_div">
+            <img alt="No image to display !!" class="image" id="image">
+            <div class="heading">
+                    <div class="cet"><h2>COLLEGE OF ENGINEERING TRIVANDRUM</h2></div>
+                    <div class="buttons">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Departmet</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                        <!-- <button class="moreicon"><i class="fa fa-bars" aria-hidden="true"></i> -->
+                        <!-- </button> -->
+                    </div>
+            </div>
+        </div>
+        <div class="news_heading">
+            <div class="latest_news">
+                <h2>Latest News</h2>
+            </div>
+            <div class="news">
+                <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+                <ul>
+                    <li><a href="seriesexams.html" target="frame">
+                        Series Exams</a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                        Dates for different scholarship programms</a>
+                    </li>
+                    <li>   
+                        <a href="dwani.html" target="frame">
+                        College festival - DWANI details</a>
+                    </li>
+                    <li><a href="#">
+                        College election guidlines
+                    </a>
+                    </li>
+                    <li><a href="#">
+                        College affiliation program news</a>
+                    </li>
+                </ul>
+            </marquee>
+            </div>            
+        </div>
+        <div class="explain_news">
+                <iframe frameborder="0" width="100%" height="300" name="frame"></iframe>
+        </div>
+        <div class="footer">
+            <div>   
+            College of Engineering Trivandrum - 2020, all rights reserved
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        var k=1; 
+        var i=1
+        function display()
+         {
+             
+            
+                    if(k===1)
+                    document.getElementById("image").src="cet 01.jpg";
+                    else if(k===2)
+                    document.getElementById("image").src="cet 02.jpg";
+                    else if(k===3)
+                    document.getElementById("image").src="cet 03.jpg";
+                    else
+                    k=0;
+
+                    k++;            
+                    setTimeout(display,2000);
+         }
+     </script> 
+</body>
+</html>

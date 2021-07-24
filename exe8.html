@@ -1,0 +1,62 @@
+<doctype HTML>
+<html>
+<title>MathOPerattions</title>
+<head>
+<script>
+  function add()
+  {
+   var a=parseInt(prompt("enter the first number:"));
+   var b=parseInt(prompt("enter the second number:"));
+   var c=a+b;
+   alert("The sum is: "+a+"+"+b+"="+c);
+   }
+  function sub()
+  {
+   var e=prompt("enter the 1st no:");
+   var f=prompt("enter the 2nd no:");
+   var g=e-f;
+   alert("The difference is: "+e+"-"+f+"="+g);
+  }
+  function mul()
+  {
+   var h=prompt("enter the first number:");
+   var i=prompt("enter the second number:");
+   var j=h*i;
+   alert("The multiplication is: "+h+"*"+i+"="+j);
+   }
+    function div()
+  {
+   var P=prompt("enter the first number:");
+   var Q=prompt("enter the second number:");
+   var R=P/Q;
+   var rem=P%Q;
+   alert("The division is: "+P+"/"+Q+"="+R+" and Remainder="+rem);
+  
+   }
+</script>
+</head>
+<body BGCOLOR="SKYBLUE" TEXT="RED">
+<form>
+<div class="mathop" id="id1">
+ <table  align="center" border="2" width="100" height="100">
+ <tr>
+  <td>ADDITION</td>
+  <td><button onclick="add()">ADD</button></td>
+  </tr>
+  <tr>
+    <td>SUBTRACTION</td>
+    <td><button onclick="sub()">SUBTRACT</button></td>
+  </tr>
+  <tr>
+   <td>MULTIPLICATION</td>
+   <td><button onclick="mul()">MULTIPLY</button></td>
+   </tr>
+  <tr>
+   <td>DIVISION</td>
+  <td> <button onclick="div()">DIVIDE</button></td>
+  </tr>
+</table>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<doctype HTML>
+<html>
+<title>PrimeOrNot</title>
+<head>
+<script>
+  function Check()
+   { 
+     var n=true;
+     var i;
+     var num=document.getElementById("t1").value;
+     if(num==1)
+       {
+        n=false;
+        alert("1 is not a prime Number");
+       }
+     else
+      {
+       for(i=2;i<num-1;i++) 
+         {
+           if (num % i == 0) 
+              {
+               n = false;
+               break;
+               }
+           }
+           if(n==true)
+            {
+           alert("the number "+num+"  is a prime number");
+           }
+          else
+          {
+           alert("the number "+num+" is not a prime number");
+           }
+        }
+}
+
+</script>
+</head>
+<body>
+<form>
+<center>
+<div id="d1">
+<label for="txt1"><h2>ENTER A NUMBER TO CHECK:</label></h2><input type="text" name="txt1" id="t1">
+<button onclick="Check()">Check</button>
+</div>
+</center>
+</form>
+</body>
+</html>
+   

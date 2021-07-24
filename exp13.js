@@ -3,16 +3,16 @@ function validate()
 
 if(nameValidate())
 {
-  if(phoneValidate())
+  if(passValidate())
   {
-    if(mailValidate())
+    if(addValidate())
     {
-      if(addValidate())
+      if(phoneValidate())
       {
-        if(passValidate())
+        if(mailValidate())
          {
            alert("form submitted without errors");
-           document.getElementById('form1').reset;
+          // document.getElementById('form1').reset;
          }
       }
     }
@@ -80,7 +80,7 @@ function phoneValidate()
    var phonePatt=/^[6-9]\d{9}$/;
    if(checkPhone=='')
    {
-     alert("Phone Number empty");
+     alert("please give your phone number");
      document.getElementById("txt3").focus();
      return false;
    }
@@ -93,7 +93,7 @@ function phoneValidate()
       return true;
    }
   else {
-    alert(" Phone Number wrong ");
+    alert(" Phone Number Invalid ");
     document.getElementById("txt3").focus();
      return false;
   }
@@ -102,23 +102,23 @@ function phoneValidate()
 }
 function mailValidate()
 {
-var mailformat = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-var checkmail=document.getElementById('id5').value;
-if(checkmail=='')
-{
-  alert("email empty");
-  document.getElementById("id4").focus();
+ var a=document.getElementById("txt1");
+ if(a == "")
+ {
+  alert("CANT BE EMPTTY");
   return false;
-}
-else {
-if(mailformat.test(checkmail))
-{
-return true;
-}
-else
-{
-alert("You have entered an invalid email address!");
-document.getElementById("id5").focus();
+ }
+ else
+  {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(a.value.match(mailformat))
+  {
+  return true;
+  }
+  else
+  {
+ alert("You have entered an invalid email address!");
+a.focus();
 return false;
 }
 }

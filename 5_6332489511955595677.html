@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Check palindrome</title>
+</head>
+<body>
+</br></br>
+<table align="center" cellspacing="40">
+<tr>
+<td><input type="button" onclick="numberp()" value="Number Palindrome" ></td>
+<td><input type="button" onclick="stringp()" value="String Palindrome" ></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><b><h3 style="color: blue;" id="result"></h3></b></td>
+</tr>
+</table>
+<script>
+function numberp()
+{
+
+		var number=Number(prompt("Enter a number"));
+        var rem,temp=0,final=0;
+        temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final==temp)
+		{
+			window.alert("The given number is palindrome");
+   document.getElementById("result").innerHTML="The number "+"'"+final+"'"+" is a palindrome";
+		}
+		else
+		{
+	      window.alert("The given number is not palindrome");
+ document.getElementById("result").innerHTML="The number "+"'"+temp+"'"+" is not a palindrome";
+		}
+
+}
+function checkPalindrome(string)
+{
+
+   
+    var len = string.length;
+    for (var i = 0; i < len / 2; i++)
+    {
+     if (string[i] !== string[len - 1 - i])
+        {
+            return "The Given String "+"'"+string+"'"+" is not a palindrome";
+        }
+     }
+       return "The Given String "+"'"+string+"'"+"is a palindrome";
+ }
+
+  function stringp()
+    {
+
+     var string = prompt('Enter a string: ');
+     var value = checkPalindrome(string);
+     alert(value);
+     document.getElementById("result").innerHTML=value;
+  
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<title>Fact</title>
+<head>
+ <script>
+    function fact()
+      {
+      var num;
+       var i;
+       num=1;
+       var val=document.getElementById("name1").value;
+       for(i=1;i<=val;i++)
+         {
+             num=num*i;
+          }
+    document.getElementById("name2").innerHTML="Factorial is="+num;
+      }
+ </script>
+</head>
+<body bgcolor="skyblue">
+<form>
+<marquee style="color:red;"><h1>WELCOME TO THE WORLD OF JAVASCRIPT</h1></marquee>
+<br>
+<center><p><b><h1><u>MY FIRST JAVASCRIPT PROGRAM</u></h1></b></p></center>
+<span><center><p id="id2"><b><h4>Factorial Of A Number</h4></b></center></span>
+<center>
+<label for="txt1">Enter A Number:<input type="text" name="txt1" id="name1">
+<input type="button" value="Find Factorial" onclick="fact()">
+<p id="name2"></p>
+
+</center>
+</form>
+</body>
+</html>

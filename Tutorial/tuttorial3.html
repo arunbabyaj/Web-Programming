@@ -1,0 +1,38 @@
+<html>
+<title>form</title>
+<body>
+<form>
+<table border="1" height="500" width="750">
+ <caption><b>FORM</b></caption>
+   <tr>
+   <td>SELECT THE FILE:</td>
+   <td><input type="file" id="myfile" name="myfile" REQUIRED></td>
+   </tr>
+   <tr>
+   <td>ARTICLE NAME:</td>
+   <td><textarea rows="7" cols="20" maxlength="120"></textarea></td>
+   </tr>
+   <tr>
+   <td>AUTHOR NAME:</td>
+   <td><input type="text" id="name2"  pattern="[A-Za-z]{10}" required></td>
+   </tr>
+   <tr>
+   <td>ARTICLE TYPE:</td>
+   <td>
+  <input type="radio" name="art" value="TECHNICAL">TECHNICAL
+  <input type="radio" name="art" value="LITERARY">LITERARY
+  <input type="radio" name="art" value="GENERAL">GENERAL
+  </td>
+  </tr>
+  <tr>
+  <td>SUBJECT TOPIC:</td>
+  <td><SELECT><OPTION>ENGLISH LITERATURE<OPTION>SHERLOCK HOLMES<OPTION>PYTHON<OPTION>DBMS<OPTION>C++<OPTION>GENERAL KNOWLEDGE</SELECT></td>
+  </tr>
+  <tr>
+  <td><input type="submit" value="SUBMIT"></td>
+ <td><input type="reset" value="RESET"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

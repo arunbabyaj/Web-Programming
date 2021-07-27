@@ -1,0 +1,238 @@
+<html>
+<title>tut1</title>
+<head>
+<script>
+  function validate()
+    {
+var userid = document.myform.name1;
+var pass = document.myform.pw;
+var username = document.myform.name2;
+var address1 = document.myform.address;
+var cntry = document.myform.country;
+var zip = document.myform.txt1;
+var mail = document.myform.txt2;
+var male = document.myform.gender1;
+var female = document.myform.gender2; 
+   if(userid_validation(userid,5,12))
+      {
+       if(passid_validation(pass,7,12))
+        {
+           if(name_validation(username))
+            {
+              if(alphanumeric(adress1))
+                { 
+                  if(countryselect(cntry))
+                    {
+                     if(allnumeric(zip))
+                        {
+                         if(ValidateEmail(mail))
+                           {
+                           if(validsex(male,female))
+                                {
+                               window.alert("DATA ADDED SUCCESSFULLY");
+                                }
+                           } 
+                        }
+                     } 
+                  }
+               }
+           }
+       }
+return false;
+}
+function userid_validation(userid,min,max)
+{
+var userlength = userid.value.length;
+  if (userlength == 0 ) 
+    {
+     alert("GIVE USER ID ")
+     }
+      if(userlength <= min ||userlength > max)
+      {
+       alert("GIVE CORRECT LENGTH");
+      userid.focus();
+      return false;
+      }
+    return true;
+ }
+function passid_validation(pass,min,max)
+{
+var pwlen = pass.value.length;
+  if (pwlen == 0 )
+   {
+   alert("YOU SHOULD PROVIDE A PASSWORD");
+   }
+   if(pwlen <= min || pwlen > mx)
+   {
+    alert("password length should be between "+min+" to "+max);
+  passid.focus();
+  return false;
+  }
+return true;
+}
+function name_validation(username){ 
+var chars = /^[A-Za-z]+$/;
+if(username.value.match(chars))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+username.focus();
+return false;
+}
+}
+function alphanumeric(address1)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+address1.focus();
+return false;
+}
+}
+function countryselect(cntry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+function allnumeric(zip)
+{ 
+var numbers = /^[0-9]+$/;
+if(zip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('ZIP code must have numeric characters only');
+uzip.focus();
+return false;
+}
+}
+
+function ValidateEmail(mail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(mail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
+function validsex(male,female)
+{
+x=0;
+
+if(male.checked) 
+{
+x++;
+} if(female.checked)
+{
+x++; 
+}
+if(x==0)
+{
+alert('Select Male/Female');
+umsex.focus();
+return false;
+}
+
+}
+
+
+
+</script>
+</head>
+<body>
+<form name="myform">
+<h1>REGISTRATION FORM</h1>
+<table border="0" width="550" height="250">
+  <tr>
+   <td><label for="id1">USER-ID:</td>
+   <td><input type="text" name="name1" id="id1"></td>
+  </tr>
+  <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+ <tr>
+   <td><label for="id2">PASSWORD:</td>
+   <td><input type="password"  name="pw" id="id2"></td>
+  </tr>
+ <tr>
+   <td style="height:20px" colspan="2"><p id="pid1"></p></td>
+  </tr>
+<tr>
+   <td><label for="id3">NAME:</td>
+   <td><input type="text" name="name2" id="id2"></td>
+  </tr>
+  <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+ <tr>
+   <td><label for="id4">ADDRESS:</td>
+   <td><input type="text" name="address"id="id4"></td>
+  </tr>
+ <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+<tr>
+   <td><label for="id5">COUNTRY:</td>
+   <td><select id="id5" name="country"><option value = "-1" selected>[choose yours]</option><option>INDIA<option>U K<option>U S A<option>AUSTRALIA</select></td>
+  </tr>
+  <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+ <tr>
+   <td><label for="id6">ZIP CODE:</td>
+   <td><input type="text" id="id6" name="txt1"></td>
+  </tr>
+  <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+  <tr>
+   <td><label for="id7">E-MAIL:</td>
+   <td><input type="text" id="id7" name="txt2"></td>
+  </tr>
+  <tr>
+   <td style="height:20px" colspan="2"><p></p></td>
+  </tr>
+  <tr>
+   <td>SEX:</td>
+   <td><input type="radio" value="MALE" name="gender1"id="i1">MALE<input type="radio" value="FEMALE" id="i1" name="gender2">FEMALE</td>
+  </tr>
+  <tr>
+   <td>LANGUAGES:</td>
+   <td><input type="checkbox" name="cb1">ENGLISH<input type="checkbox" name="cb2">NON-ENGLISH</td>
+  </tr>
+  <tr>
+   <td><label for="id8">ABOUT:</td>
+   <td><textarea id="id8" rows="10" cols="40" height="400"></textarea></td>
+  </tr>
+ <tr>
+   <td colspan="2"><center><input type="submit" value="Submit" onclick="validate()"></center></td>
+   </tr>
+</table>
+  
+</form>
+</body>
+</html>

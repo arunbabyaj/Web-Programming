@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body onload="begin()">
+
+<div id="id1"></div>
+
+<script>
+function begin() {
+  var time = new Date();
+  var hours = time.getHours();
+  var minutes = time.getMinutes();
+  var seconds = time.getSeconds();
+  minutes = check(minutes);
+  seconds = check(seconds);
+  document.getElementById("id1").innerHTML = hours + ":" + minutes + ":" + seconds;
+  var tmstmp = setTimeout(function(){ begin() }, 500);
+}
+
+function check(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+
+</body>
+</html>
